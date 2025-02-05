@@ -1,0 +1,7 @@
+x64
+Debug
+build
+Release
+.vs
+*.user
+__pycache__

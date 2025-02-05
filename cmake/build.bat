@@ -1,0 +1,1 @@
+solution.py --configure --clean --build --generator "Visual Studio 16 2019" --console --arch vs2019
