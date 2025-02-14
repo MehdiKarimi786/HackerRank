@@ -8,3 +8,103 @@ Thunderstorm: 64405
 18
 6
 15
+103
+Thunderstorm: 73307
+86
+Frostbite: 8165
+56
+56
+142
+Waterbolt: 18428
+Fireball: 42084
+Frostbite: 88975
+Thunderstorm: 29670
+74
+146
+136
+Waterbolt: 54548
+86
+112
+Waterbolt: 74098
+173
+132
+Thunderstorm: 84471
+Fireball: 37507
+Waterbolt: 54787
+Thunderstorm: 92952
+Thunderstorm: 22489
+Thunderstorm: 61211
+Frostbite: 6353
+71
+Frostbite: 93508
+209
+110
+158
+86
+142
+Thunderstorm: 21128
+Waterbolt: 35691
+Waterbolt: 3553
+41
+Thunderstorm: 70132
+Waterbolt: 91162
+Thunderstorm: 19245
+Fireball: 51777
+191
+140
+Waterbolt: 36691
+104
+40
+60
+145
+108
+Frostbite: 16394
+75
+Thunderstorm: 6656
+147
+Fireball: 60633
+Frostbite: 60156
+63
+Fireball: 88891
+143
+143
+132
+Fireball: 79262
+74
+111
+Thunderstorm: 97013
+Thunderstorm: 26241
+146
+192
+Thunderstorm: 70670
+Waterbolt: 44900
+91
+Waterbolt: 1328
+80
+65
+Thunderstorm: 8736
+87
+154
+Fireball: 93053
+70
+Fireball: 79537
+Fireball: 40393
+Frostbite: 48780
+Frostbite: 73718
+Fireball: 40049
+Thunderstorm: 79183
+100
+100
+76
+Fireball: 34707
+100
+112
+Frostbite: 32036
+130
+105
+Waterbolt: 17252
+Thunderstorm: 71832
+Thunderstorm: 27597
+Fireball: 73709
+Waterbolt: 52015
+Thunderstorm: 9061

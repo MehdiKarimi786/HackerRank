@@ -113,10 +113,8 @@ void counterspell(Spell* spell) {
     auto reveal = spell->revealScrollName();
     int lenReveal = reveal.length();
     auto journal = SpellJournal::read();
-    int lenJournal = journal.length();
 
     vector<vector<int>> allPositions;
-
     for (auto i(0); i < lenReveal; ++i)
     {
         vector<int> positions;
@@ -139,62 +137,24 @@ void counterspell(Spell* spell) {
     }
 
     int sz = allPositions.size();
-    struct Node {
-        Node(int row, int col, int pos):
-            row_(row),
-            col_(col),
-            pos_(pos)
-        {}
-        int row_;
-        int col_;
-        int pos_;
-        vector<Node> nodes_;
-    };
-
-    function<Node(int, int, int)> getNode;
-    getNode = [&](int curRow, int curCol, int curPos) {
-        auto curNode = Node(curRow, curCol, curPos);
-        for (auto nextCol(curCol + 1); nextCol < sz; ++nextCol)
-        {
-            auto && nextPositions = allPositions[nextCol];
-            int nextSz = nextPositions.size();
-            for (auto nextRow(0); nextRow < nextSz; ++nextRow)
-            {
-                auto nextPos = allPositions[nextCol][nextRow];
-                if (curPos < nextPos)
-                {
-                    auto nextNode = getNode(nextRow, nextCol, nextPos);
-                    curNode.nodes_.push_back(nextNode);
-                    break;
-                }
-            }
-        }
-        return curNode;
-    };
-
-    function<int(Node)> getMaxDepth;
-    getMaxDepth = [&](Node node) {
-        auto result = 0;
-        for (auto ch : node.nodes_)
-        {
-            result = max<int>(result, getMaxDepth(ch));
-        }
-        return result + 1;
-    };
-
-    function<int(int, int, int)> getMaxDepth2;
-    getMaxDepth2 = [&](int curRow, int curCol, int curPos) {
+    auto sizes = vector(sz, 0);
+    for (auto i(0); i < sz; ++i)
+    {
+        sizes[i] = allPositions[i].size();
+    }
+    function<int(int, int, int)> getMaxDepth;
+    getMaxDepth = [&](int curRow, int curCol, int curPos) {
         auto result = 0;
         for (auto nextCol(curCol + 1); nextCol < sz; ++nextCol)
         {
-            auto&& nextPositions = allPositions[nextCol];
-            int nextSz = nextPositions.size();
+            auto& nextPositions = allPositions[nextCol];
+            auto& nextSz = sizes[nextCol];
             for (auto nextRow(0); nextRow < nextSz; ++nextRow)
             {
-                auto nextPos = allPositions[nextCol][nextRow];
+                auto& nextPos = nextPositions[nextRow];
                 if (curPos < nextPos)
                 {
-                    result = max<int>(result, getMaxDepth2(nextRow, nextCol, nextPos));
+                    result = max<int>(result, getMaxDepth(nextRow, nextCol, nextPos));
                     break;
                 }
             }
@@ -207,11 +167,7 @@ void counterspell(Spell* spell) {
     {
         auto curRow = 0;
         auto curPos = allPositions[curCol][curRow];
-        /*
-        auto curNode = getNode(curRow, curCol, curPos);
-        maxDepth = max<int>(maxDepth, getMaxDepth(curNode));
-        */
-        maxDepth = max<int>(maxDepth, getMaxDepth2(curRow, curCol, curPos));
+        maxDepth = max<int>(maxDepth, getMaxDepth(curRow, curCol, curPos));
     }
 
     cout << maxDepth << endl;
