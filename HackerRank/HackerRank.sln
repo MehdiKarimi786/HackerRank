@@ -11,6 +11,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VariadicsTemplate", "Variad
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polymorphism", "Polymorphism\Polymorphism.vcxproj", "{FE7D3BAA-5A88-4087-92C3-1D630C4A191B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphTheory-ProblemSolving", "GraphTheory-ProblemSo,lving\GraphTheory-ProblemSo,lving.vcxproj", "{FDDE32EA-FBEF-49BA-A7E7-4023F609A6CC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MagicSpell", "MagicSpell\MagicSpell.vcxproj", "{9EC15E8D-9821-4549-A307-572B1073E1B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +55,22 @@ Global
 		{FE7D3BAA-5A88-4087-92C3-1D630C4A191B}.Release|x64.Build.0 = Release|x64
 		{FE7D3BAA-5A88-4087-92C3-1D630C4A191B}.Release|x86.ActiveCfg = Release|Win32
 		{FE7D3BAA-5A88-4087-92C3-1D630C4A191B}.Release|x86.Build.0 = Release|Win32
+		{FDDE32EA-FBEF-49BA-A7E7-4023F609A6CC}.Debug|x64.ActiveCfg = Debug|x64
+		{FDDE32EA-FBEF-49BA-A7E7-4023F609A6CC}.Debug|x64.Build.0 = Debug|x64
+		{FDDE32EA-FBEF-49BA-A7E7-4023F609A6CC}.Debug|x86.ActiveCfg = Debug|Win32
+		{FDDE32EA-FBEF-49BA-A7E7-4023F609A6CC}.Debug|x86.Build.0 = Debug|Win32
+		{FDDE32EA-FBEF-49BA-A7E7-4023F609A6CC}.Release|x64.ActiveCfg = Release|x64
+		{FDDE32EA-FBEF-49BA-A7E7-4023F609A6CC}.Release|x64.Build.0 = Release|x64
+		{FDDE32EA-FBEF-49BA-A7E7-4023F609A6CC}.Release|x86.ActiveCfg = Release|Win32
+		{FDDE32EA-FBEF-49BA-A7E7-4023F609A6CC}.Release|x86.Build.0 = Release|Win32
+		{9EC15E8D-9821-4549-A307-572B1073E1B8}.Debug|x64.ActiveCfg = Debug|x64
+		{9EC15E8D-9821-4549-A307-572B1073E1B8}.Debug|x64.Build.0 = Debug|x64
+		{9EC15E8D-9821-4549-A307-572B1073E1B8}.Debug|x86.ActiveCfg = Debug|Win32
+		{9EC15E8D-9821-4549-A307-572B1073E1B8}.Debug|x86.Build.0 = Debug|Win32
+		{9EC15E8D-9821-4549-A307-572B1073E1B8}.Release|x64.ActiveCfg = Release|x64
+		{9EC15E8D-9821-4549-A307-572B1073E1B8}.Release|x64.Build.0 = Release|x64
+		{9EC15E8D-9821-4549-A307-572B1073E1B8}.Release|x86.ActiveCfg = Release|Win32
+		{9EC15E8D-9821-4549-A307-572B1073E1B8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

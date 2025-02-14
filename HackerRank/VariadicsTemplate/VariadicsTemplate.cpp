@@ -65,7 +65,58 @@ struct CheckValues<0, digits...> {
     }
 };
 
+
+
+enum class Fruit { apple, orange, pear };
+enum class Color { red, green, orange };
+template <typename T> struct Traits;
+
+template <> struct Traits<Fruit> {
+    static string name(int index)
+    {
+        switch (index)
+        {
+        case (int)Fruit::apple:
+            return "apple";
+        case (int)Fruit::orange:
+            return "orange";
+        case (int)Fruit::pear:
+            return "pear";
+
+        default:
+            return "unknown";
+        }
+    }
+};
+
+template <> struct Traits<Color> {
+    static string name(int index)
+    {
+        switch (index)
+        {
+        case (int)Color::green:
+            return "green";
+        case (int)Color::orange:
+            return "orange";
+        case (int)Color::red:
+            return "red";
+
+        default:
+            return "unknown";
+        }
+    }
+};
+
+
+
 int main()
 {
+    cout << Traits<Color>::name(1) << " ";
+    cout << Traits<Fruit>::name(0) << "\n";
+
+    cout << Traits<Color>::name(3) << " ";
+    cout << Traits<Fruit>::name(3) << "\n";
+    
     CheckValues<6>::check(65, 1);
 }
+
