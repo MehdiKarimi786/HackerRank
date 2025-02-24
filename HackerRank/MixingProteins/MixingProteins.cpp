@@ -49,7 +49,7 @@ string pmix1(string s, int k) {
     return s;
 }
 
-string pmix2(string s, int k) {
+string pmix(string s, int k) {
     static vector<vector<char>> ring2 = {
         {'A', 'B', 'C', 'D'},
         {'B', 'A', 'D', 'C'},
@@ -71,40 +71,6 @@ string pmix2(string s, int k) {
     return s;
 }
 
-string pmix(string str, int kt) {
-    static vector<vector<char>> ring2 = {
-        {'A', 'B', 'C', 'D'},
-        {'B', 'A', 'D', 'C'},
-        {'C', 'D', 'A', 'B'},
-        {'D', 'C', 'B', 'A'},
-    };
-
-    auto getPMIX = [](string s, int k) {
-        int sz = s.size();
-        auto data = s.data();
-        for (auto i(0); i < k; ++i)
-        {
-            auto firstCh = data[0];
-            auto lastCh = data[sz - 1];
-            for (auto ch(0); ch < sz - 1; ++ch)
-            {
-                data[ch] = ring2[data[ch] - 'A'][data[ch + 1] - 'A'];
-            }
-            data[sz - 1] = ring2[lastCh - 'A'][firstCh - 'A'];
-        }
-        return s;
-    };
-
-    int len = str.size();
-    for(int i1(0); i1 <len;++i1)
-    {
-        for(int i1(0); i1 <len;++i1)
-    {
-    }
-    }
-
-    return getPMIX(str, kt);
-}
 
 int main()
 {
